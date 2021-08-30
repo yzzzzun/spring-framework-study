@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.yzzzzun.spring.aop.DataService;
 import com.yzzzzun.spring.aop.v2.DataServiceTarget;
 import com.yzzzzun.spring.aop.v3.DataLogProxyFactoryBean;
-import com.yzzzzun.spring.aop.v4.DataLogAop;
+import com.yzzzzun.spring.aop.v5.DataLogAop;
 
 @Configuration
 public class SpringConfig {
@@ -23,4 +23,5 @@ public class SpringConfig {
 		dataLogProxyFactoryBean.setTarget(new DataServiceTarget());
 		return dataLogProxyFactoryBean;
 	}
+	
 }
