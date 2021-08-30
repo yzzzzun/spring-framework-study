@@ -1,4 +1,4 @@
-package com.yzzzzun.spring.aop.v4;
+package com.yzzzzun.spring.aop.v5;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,19 +15,19 @@ public class DataServiceImpl implements DataService {
 	private Long index = 0L;
 
 	@Override
-	public List<String> getDatas(){
+	public List<String> getDatas() {
 		return dataMap.keySet().stream()
 			.map(dataMap::get)
 			.collect(Collectors.toList());
 	}
 
 	@Override
-	public String getData(Long key){
+	public String getData(Long key) {
 		return dataMap.get(key);
 	}
 
 	@Override
-	public void addData(String data){
+	public void addData(String data) {
 		dataMap.put(++index, data);
 	}
 }
